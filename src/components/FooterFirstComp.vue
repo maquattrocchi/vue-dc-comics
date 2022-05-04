@@ -168,11 +168,6 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
     }
-    .container{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
     .left-footer{
         display: flex;
         gap: 1rem;
