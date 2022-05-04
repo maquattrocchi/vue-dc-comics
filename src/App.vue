@@ -3,7 +3,7 @@
       <app-header/>
 
       <main>
-          <div>Blocco Nero</div>
+          <main-grid/>
           <main-blue-component/>
       </main>
 
@@ -15,6 +15,7 @@
 
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import MainGrid from './components/MainGrid.vue'
 import MainBlueComponent from './components/MainBlueComponent.vue'
 
 export default {
@@ -22,7 +23,8 @@ export default {
   components: {
     AppFooter,
     AppHeader,
-    MainBlueComponent
+    MainGrid,
+    MainBlueComponent,
   }
 }
 </script>
