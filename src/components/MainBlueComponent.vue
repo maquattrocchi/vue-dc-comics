@@ -1,7 +1,5 @@
 <template>
-    <header>
-        <p>Blocco Azzurro</p>
-    </header>
+    <p>Blocco Azzurro</p>
 </template>
 
 <script>
@@ -11,5 +9,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../style/variables';
+    @import '../style/general';
 
 </style>

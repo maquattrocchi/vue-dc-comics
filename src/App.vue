@@ -6,7 +6,7 @@
           <div>Blocco Nero</div>
           <main-blue-component/>
       </main>
-      
+
       <app-footer/>
   </div>
 </template>
@@ -28,5 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
+    @import './style/variables';
+    @import './style/general';
 
 </style>
