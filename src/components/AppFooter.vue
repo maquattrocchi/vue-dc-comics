@@ -20,10 +20,8 @@ export default {
 <style lang="scss">
     @import '../style/variables';
     @import '../style/general';
-    
+
     .container{
-        display: flex;
-        align-items: center;
         justify-content: space-between;
     }
 </style>

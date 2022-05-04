@@ -6,7 +6,7 @@
             </div>
             <div class="right-footer">
                 <p>Follow us</p>
-                <ul>
+                <ul class="flex">
                     <li v-for="(item, index) in socialLink" :key="index">
                         <a :href="item.url">
                             <img :src="item.image" :alt="item.alt">
@@ -80,13 +80,6 @@ export default {
             text-transform: uppercase;
             font-size: 1.5rem;
             font-weight: bold;
-        }
-        ul{
-            display: flex;
-            gap: 1rem;
-            li{
-                list-style: none;
-            }
         }
     }
 </style>

@@ -1,10 +1,10 @@
 <template>
     <header>
-        <div class="container display-flex">
+        <div class="container">
             <img src="../assets/img/dc-logo.png" alt="dc-logo">
             <nav>
-                <ul>
-                    <li v-for="(item, index) in links" :key="index">
+                <ul class="flex">
+                    <li v-for="(item, index) in links" :key="index" :class="{'selected' : item.active}">
                         <a :href="item.url" :class="{'selected' : item.active}">{{item.testo}}</a>
                     </li>
                 </ul>
@@ -79,33 +79,30 @@ export default {
     @import '../style/variables';
     @import '../style/general';
 
-    header{
-        padding: 1rem 0;
-    }
-    .display-flex{
-        display: flex;
+    .container{
         justify-content: space-between;
-        align-items: center;
     }
     img{
         width: 50px;
     }
-    ul{
-        display: flex;
-        gap: 1rem;
-        li {
-            list-style: none;
-            a{
-                color: $blackColor;
-                font-size: 0.8rem;
-                text-transform: uppercase;
-                font-weight: bold;
-                padding: 1rem 0;
-            }
+    li {
+        padding: 2rem 0;
+        border-bottom: 3px solid transparent;
+        a{
+            color: $blackColor;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 2rem 0;
         }
+    }
+    li.selected{
+        border-bottom: 3px solid $blueColor;
     }
     a.selected{
         color: $blueColor;
-        border-bottom: 3px solid $blueColor;
+    }
+    li:hover a{
+        color: $blueColor;
     }
 </style>

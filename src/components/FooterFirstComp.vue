@@ -180,11 +180,8 @@ export default {
         }
         ul{
             padding-bottom: 1rem;
-            li{
-                list-style: none;
-                a{
-                    color: $lightGrey;
-                }
+            a{
+                color: $lightGrey;
             }
         }
     }

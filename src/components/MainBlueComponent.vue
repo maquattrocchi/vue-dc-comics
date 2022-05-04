@@ -1,8 +1,8 @@
 <template>
     <section>
-        <div class="container display-flex">
+        <div class="container">
             <nav>
-                <ul>
+                <ul class="flex">
                     <li v-for="(item, index) in mainLinks" :key="index">
                         <img :src="item.image" :alt="item.testo">
                         <a :href="item.url">{{item.testo}}</a>
@@ -57,30 +57,23 @@ export default {
     section{
         background-color: $blueColor;
     }
-    .display-flex{
-        display: flex;
+    .container{
         justify-content: center;
-        align-items: center;
     }
     nav{
         padding: 2rem 0,
     }
     ul{
-        display: flex;
         align-items: center;
-        gap: 1rem;
-        li{
-            list-style: none;
-            a{
-                color: $whiteColor;
-                text-transform: uppercase;
-                vertical-align: middle;
-            }
-            img{
-                height: 30px;
-                vertical-align: middle;
-                margin-right: 0.5rem;
-            }
+        a{
+            color: $whiteColor;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+        img{
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 0.5rem;
         }
     }
 </style>
