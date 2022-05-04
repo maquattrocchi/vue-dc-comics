@@ -75,12 +75,11 @@ export default {
                 color: $whiteColor;
                 text-transform: uppercase;
                 vertical-align: middle;
-                font-size: 0.9rem;
             }
             img{
                 height: 30px;
                 vertical-align: middle;
-                margin: 0 0.5rem;
+                margin-right: 0.5rem;
             }
         }
     }
