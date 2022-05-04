@@ -97,7 +97,7 @@ export default {
         }
     }
     li.selected{
-        border-bottom: 3px solid $blueColor;
+        border-color: $blueColor;
     }
     a.selected{
         color: $blueColor;
