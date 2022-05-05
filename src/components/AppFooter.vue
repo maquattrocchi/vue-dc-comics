@@ -18,10 +18,5 @@ export default {
 </script>
 
 <style lang="scss">
-    @import '../style/variables';
-    @import '../style/general';
 
-    .container{
-        justify-content: space-between;
-    }
 </style>

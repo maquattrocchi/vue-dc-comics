@@ -3,7 +3,7 @@
         <div class="container">
             <img src="../assets/img/dc-logo.png" alt="dc-logo">
             <nav>
-                <ul class="flex">
+                <ul class="flex-gap-1">
                     <li v-for="(item, index) in links" :key="index" :class="{'selected' : item.active}">
                         <a :href="item.url" :class="{'selected' : item.active}">{{item.testo}}</a>
                     </li>
@@ -78,31 +78,42 @@ export default {
 <style scoped lang="scss">
     @import '../style/variables';
     @import '../style/general';
+    @import '../style/mixins';
 
-    .container{
-        justify-content: space-between;
-    }
-    img{
-        width: 50px;
-    }
-    li {
-        padding: 2rem 0;
-        border-bottom: 3px solid transparent;
-        a{
-            color: $blackColor;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding: 2rem 0;
+    header{
+        background-color: $whiteColor;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        .container{
+            @include flex('between');
+
+            img{
+                width: 50px;
+            }
+            li {
+                padding: 2rem 0;
+                border-bottom: 3px solid transparent;
+
+                &.selected{
+                    border-color: $blueColor;
+                }
+                a{
+                    color: $blackColor;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    padding: 2rem 0;
+                    
+                    &:hover,
+                    &.selected{
+                        color: $blueColor;
+                    }
+                }
+            }
         }
-    }
-    li.selected{
-        border-color: $blueColor;
-    }
-    a.selected{
-        color: $blueColor;
-    }
-    li:hover a{
-        color: $blueColor;
     }
 </style>

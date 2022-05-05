@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="container">
-            <div class="left-footer">
+            <div class="left-footer flex-gap-1">
                 <div>
                     <p>Dc Comics</p>
                     <ul>
@@ -162,31 +162,45 @@ export default {
 <style scoped lang="scss">
     @import '../style/variables';
     @import '../style/general';
+    @import '../style/mixins';
 
     section{
         background-image: url(../assets/img/footer-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-    }
-    .left-footer{
-        display: flex;
-        gap: 1rem;
-        p{
-            color: $whiteColor;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding-bottom: 1rem;
-        }
-        ul{
-            padding-bottom: 1rem;
-            a{
-                color: $lightGrey;
+
+        .container{
+            @include flex('aligncenter');
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+
+            .left-footer{
+                p{
+                    color: $whiteColor;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    padding-bottom: 1rem;
+                }
+                ul{
+                    padding-bottom: 1rem;
+
+                    a{
+                        color: $lightGrey;
+                    }
+                }
+            }
+            .right-footer{
+                width: 500px;
+                position: absolute;
+                top: -52px;
+                right: 0;
+
+                img{
+                    width: 100%;
+                }
             }
         }
     }
-    .right-footer img{
-        width: 450px;
-    }
-
 </style>

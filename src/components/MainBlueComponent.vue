@@ -2,7 +2,7 @@
     <section>
         <div class="container">
             <nav>
-                <ul class="flex">
+                <ul class="flex-gap-1">
                     <li v-for="(item, index) in mainLinks" :key="index">
                         <img :src="item.image" :alt="item.testo">
                         <a :href="item.url">{{item.testo}}</a>
@@ -53,27 +53,28 @@ export default {
 <style scoped lang="scss">
     @import '../style/variables';
     @import '../style/general';
+    @import '../style/mixins';
 
     section{
         background-color: $blueColor;
-    }
-    .container{
-        justify-content: center;
-    }
-    nav{
-        padding: 2rem 0,
-    }
-    ul{
-        align-items: center;
-        a{
-            color: $whiteColor;
-            text-transform: uppercase;
-            vertical-align: middle;
-        }
-        img{
-            height: 30px;
-            vertical-align: middle;
-            margin-right: 0.5rem;
+
+        .container{
+            @include flex();
+
+            nav{
+                padding: 2rem 0;
+
+                img{
+                    height: 35px;
+                    vertical-align: middle;
+                    margin-right: 0.5rem;
+                }
+                a{
+                    color: $whiteColor;
+                    text-transform: uppercase;
+                    vertical-align: middle;
+                }
+            }
         }
     }
 </style>

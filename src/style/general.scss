@@ -11,16 +11,14 @@ body{
 a{
     text-decoration: none;
 }
-li{
-    list-style: none;
-}
-ul.flex{
+.flex-gap-1{
     display: flex;
     gap: 1rem;
+}
+li{
+    list-style: none;
 }
 .container{
     width: 80%;
     margin: auto;
-    display: flex;
-    align-items: center;
 }
