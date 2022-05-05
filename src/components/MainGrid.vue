@@ -1,14 +1,19 @@
 <template>
     <section>
         <div class="container">
-            <p>Content here</p>
+            <product-card v-for="(comic, index) in comics" :key="index" :immagine="comic.thumb" :titolo="comic.series" />
         </div>
     </section>
 </template>
 
 <script>
+import ProductCard from './ProductCard.vue';
+
 export default {
     name: 'MainGrid',
+    components: {
+        ProductCard,
+    },
     data(){
         return{
             comics: [
@@ -86,19 +91,22 @@ export default {
                 }
             ]
         }
-    }
+    },
 }
 </script>
 
 <style scoped lang="scss">
     @import '../style/variables';
     @import '../style/general';
+    @import '../style/mixins';
 
     section{
         background-color: $blackColor;
         padding: 2rem 0;
-    }
-    p{
-        color: $whiteColor
+
+        .container{
+            @include flex('justifycenter');
+            flex-wrap: wrap;
+        }
     }
 </style>
