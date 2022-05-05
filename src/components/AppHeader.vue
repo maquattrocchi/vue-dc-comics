@@ -1,7 +1,11 @@
 <template>
     <header>
         <div class="container">
+
             <img src="../assets/img/dc-logo.png" alt="dc-logo">
+
+            <hamburger-menu :links = "links"/>
+
             <nav>
                 <ul class="flex-gap-1">
                     <li v-for="(item, index) in links" :key="index" :class="{'selected' : item.active}">
@@ -9,13 +13,19 @@
                     </li>
                 </ul>
             </nav>
+            
         </div>
     </header>
 </template>
 
 <script>
+import HamburgerMenu from './HamburgerMenu.vue'
+
 export default {
     name: 'AppHeader',
+    components:{
+        HamburgerMenu,
+    },
     data(){
         return{
             links: [
@@ -75,7 +85,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
     @import '../style/variables';
     @import '../style/general';
     @import '../style/mixins';
@@ -113,6 +123,17 @@ export default {
                         color: $blueColor;
                     }
                 }
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px){
+        header{
+            height: 86px;
+            @include flex('aligncenter');
+
+            nav{
+                display: none;
             }
         }
     }

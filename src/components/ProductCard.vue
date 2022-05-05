@@ -34,12 +34,9 @@ export default {
         flex: 0 0 auto;
 
         .prod-card{
-            display: flex;
-            flex-direction: column;
             padding: 1rem;
 
             .card-image{
-                width: 100%;
                 height: 150px;
                 overflow: hidden;
 

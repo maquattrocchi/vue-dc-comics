@@ -1,7 +1,6 @@
 <template>
     <section>
         <div class="container">
-
             <div class="button title">
                 <h3>Current series</h3>
             </div>
@@ -10,7 +9,6 @@
 
             <a href="#" class="button btn">Load more</a>
         </div>
-
     </section>
 </template>
 
@@ -116,7 +114,7 @@ export default {
             @include flex('justifycenter');
             flex-wrap: wrap;
             position: relative;
-        }
+
             .button{
                 padding: 0.5rem 1rem;
                 background-color: $blueColor;
@@ -137,4 +135,5 @@ export default {
                 }
             }
         }
+    }
 </style>
