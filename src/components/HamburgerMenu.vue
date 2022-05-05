@@ -1,5 +1,5 @@
 <template>
-    <a href="#" class="hamb-menu">
+    <div class="hamb-menu">
         <div @click="openMenu = true">
             <span></span>
             <span></span>
@@ -16,7 +16,7 @@
                 </li>
             </ul>
         </div>
-    </a>
+    </div>
 </template>
 
 <script>
@@ -33,11 +33,10 @@ export default {
 
 <style lang="scss" scoped>
     @import '../style/variables';
-    @import '../style/general';
-    @import '../style/mixins';
 
     .hamb-menu{
         position: relative;
+        cursor: pointer;
 
         span{
         display: block;
