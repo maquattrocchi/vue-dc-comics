@@ -1,8 +1,16 @@
 <template>
     <section>
         <div class="container">
+
+            <div class="button title">
+                <h3>Current series</h3>
+            </div>
+
             <product-card v-for="(comic, index) in comics" :key="index" :immagine="comic.thumb" :titolo="comic.series" />
+
+            <a href="#" class="button btn">Load more</a>
         </div>
+
     </section>
 </template>
 
@@ -107,6 +115,26 @@ export default {
         .container{
             @include flex('justifycenter');
             flex-wrap: wrap;
+            position: relative;
         }
-    }
+            .button{
+                padding: 0.5rem 1rem;
+                background-color: $blueColor;
+                color: $whiteColor;
+                text-transform: uppercase;
+                position: absolute;
+
+                &.title{
+                    left: 0;
+                    top: -52px;
+                }
+
+                &.btn{
+                    bottom: -16px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 0.8rem;
+                }
+            }
+        }
 </style>
